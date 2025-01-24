@@ -1,5 +1,8 @@
-// Replace with your OpenWeatherMap API key
-const API_KEY = '429485bf4517b41c09bbe9800bd70a1d';
+// Get API key from environment variable
+const API_KEY = process.env.WEATHER_API_KEY || '';
+if (!API_KEY) {
+    console.error('Please set your WEATHER_API_KEY in the .env file');
+}
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 // DOM Elements
