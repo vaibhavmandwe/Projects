@@ -1,7 +1,7 @@
-// Get API key from environment variable
-const API_KEY = process.env.WEATHER_API_KEY || '';
+// Get API key from config
+const API_KEY = window.config.apiKey;
 if (!API_KEY) {
-    console.error('Please set your WEATHER_API_KEY in the .env file');
+    console.error('API key not found in config.js');
 }
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
